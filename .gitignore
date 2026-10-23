@@ -1,0 +1,9 @@
+# backups written by tools/refresh_3mf.py and by hand
+*.bak
+*.bak-*
+# exported meshes and slicer output (the 3MF project is the source for printing)
+*.stl
+*.gcode
+__pycache__/
+# third-party reference images, kept locally only
+reference/

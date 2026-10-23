@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-70 -75 260 210" width="520" height="420" font-family="Helvetica, Arial, sans-serif" font-size="7">
+  <title>IR Tracker LED geometry (TrackClip Pro), side view, mm</title>
+  <rect x="-70" y="-75" width="260" height="210" fill="#ffffff"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c07a00"/>
+    </marker>
+    <marker id="e" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b00020"/>
+    </marker>
+  </defs>
+  <!-- y is flipped: drawing y = -model y -->
+  <!-- frame: F (0,0), T (30,40), B (74,-70), short flats behind T and B -->
+  <path d="M30,-40 L22,-40 L0,0 L66,70 L74,70" fill="none" stroke="#555" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" opacity="0.25"/>
+  <!-- LEDs -->
+  <g fill="#6a1b9a">
+    <rect x="-4.6" y="-2.5" width="4.6" height="5"/>
+    <rect x="25.4" y="-42.5" width="4.6" height="5"/>
+    <rect x="69.4" y="67.5" width="4.6" height="5"/>
+  </g>
+  <g fill="#222" font-weight="bold" font-size="8">
+    <text x="-16" y="3">F</text>
+    <text x="17" y="-46">T</text>
+    <text x="60" y="83">B</text>
+  </g>
+  <!-- emission arrows -->
+  <g stroke="#b00020" stroke-width="0.8" marker-end="url(#e)">
+    <line x1="1" y1="-6" x2="12" y2="-6"/>
+    <line x1="31" y1="-46" x2="42" y2="-46"/>
+    <line x1="75" y1="64" x2="86" y2="64"/>
+  </g>
+  <text x="105" y="-60" fill="#b00020">camera this way →</text>
+  <!-- dimensions -->
+  <g stroke="#c07a00" stroke-width="0.6" fill="none">
+    <line x1="0" y1="10" x2="30" y2="10" marker-start="url(#a)" marker-end="url(#a)"/>
+    <line x1="0" y1="-62" x2="74" y2="-62" marker-start="url(#a)" marker-end="url(#a)"/>
+    <line x1="40" y1="0" x2="40" y2="-40" marker-start="url(#a)" marker-end="url(#a)"/>
+    <line x1="95" y1="0" x2="95" y2="70" marker-start="url(#a)" marker-end="url(#a)"/>
+    <g stroke-dasharray="1.5 1.5" stroke="#999">
+      <line x1="0" y1="0" x2="100" y2="0"/>
+      <line x1="0" y1="2" x2="0" y2="-66"/>
+      <line x1="30" y1="-36" x2="30" y2="14"/>
+      <line x1="30" y1="-40" x2="44" y2="-40"/>
+      <line x1="74" y1="66" x2="74" y2="-66"/>
+      <line x1="76" y1="70" x2="99" y2="70"/>
+    </g>
+  </g>
+  <g fill="#c07a00">
+    <text x="12" y="18">30</text>
+    <text x="34" y="-65">74</text>
+    <text x="43" y="-18">40</text>
+    <text x="98" y="38">70</text>
+  </g>
+  <g fill="#444" font-size="6">
+    <text x="-65" y="100">Side view, mm. Points are the centres of the LED emitting faces.</text>
+    <text x="-65" y="110">F (0, 0)   T (30, 40)   B (74, −70)   ·   F–T 50.0   F–B 101.9   T–B 118.5</text>
+    <text x="-65" y="120">All three LEDs point the same way, towards the camera.</text>
+  </g>
+</svg>
