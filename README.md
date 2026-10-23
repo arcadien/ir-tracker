@@ -10,6 +10,11 @@ can adapt it to another headset or battery.
 
 ![Assembly](renders/assembly.png)
 
+The built clip, lid and channel covers off: switch at the top of the box, perfboard junction with the three
+resistors on top of the battery, micro-USB at the bottom, LED wires in the channels.
+
+![Built clip, open](docs/build-photo.jpg)
+
 | Side view (front to the right) | Seen from the camera |
 |---|---|
 | ![Side view](renders/side_view.png) | ![Camera view](renders/camera_view.png) |
@@ -122,7 +127,7 @@ Wiring: pack + → switch (middle pin + one side pin) → junction board → thr
    down their branch and into the box through the slots at the foot of the inner wall.
 5. **Wire the box and mount the ball.** Press the switch into its pocket against the top wall, lever through the
    slot. Hot-glue the pack on the floor bosses, with the micro-USB in front of its notch, and tuck the junction board
-   where it fits (reserve room for it with `pack_top_room`). Fix the ball flange to the outside of the box floor with
+   on top of the pack (reserve room for it with `pack_top_room`; see the photo above). Fix the ball flange to the outside of the box floor with
    3 × M3 × 6 driven **from the ball side** (they self-tap into the floor bosses). There is no room inside the box
    for the screw heads. Close the lid with 2 × M3 self-tapping screws.
 6. **Close the channels.** Fit the two channel covers in their recesses and fix them with hot glue.
