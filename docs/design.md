@@ -21,6 +21,9 @@ flange); a small perfboard junction in the box carries the LED branches and the 
 LED legs, which bend down the printed slot right behind the flange); the F LED leads were too short to wire
 comfortably (the guide now says to leave them long). The battery and box dimensions were gathered at the top of the
 SCAD file (`/* [Your parts] */`).
+Build order used: clamp on the headset first; perfboard junction with base wires, switch, resistors and long LED
+wires; LEDs soldered with heat-shrink on the legs; box wired, ball flange screwed from outside; channel covers
+hot-glued. Tracking with opentrack PointTracker on the modded webcam: ~12 px LED spots at 2 m.
 
 ## Intent
 

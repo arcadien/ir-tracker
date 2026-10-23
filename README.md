@@ -106,43 +106,46 @@ To export a single part as STL: `openscad -D 'part="print_arm"' -o arm.stl ir-tr
 ## Assembly
 
 Wiring: pack + → switch (middle pin + one side pin) → junction board → three branches in parallel, each
-270 Ω + LED → pack −.
+270 Ω + LED → pack −. The order below is the one used for the working build.
 
-1. **Prepare the LEDs.** Solder two thin wires (28 AWG) to the legs of each LED, insulate the joints with
-   heat-shrink, and keep them short and flat. **Do not put the resistors on the LEDs**: the legs bend straight down
-   into the wire channel right behind the flange, so there is no room for a resistor there. The resistors go on the
-   junction board in the box. Solder the wires **before** placing the LEDs, and **leave the F (middle) LED wires
-   long (6 cm or more)**. F sits right against the box, and its wires are very hard to reach once it is in its slot.
-2. **Place the LEDs.** Drop each LED into its slot from outside, emitting face towards the front (the T / B side,
-   towards the camera), flange towards the back. Bend the legs down into the wire channel. Press the cap on top.
-3. **Route the wires.** F runs straight back into the box through the open trench (the lid closes it). T and B run
-   down their branch and into the box through the slots at the foot of the inner wall. Press the two channel covers
-   into their recesses.
-4. **Mount the ball before the pack.** Place the ball flange against the outside of the box floor and drive the
-   3 × M3 × 6 **from the ball side** through the flange into the floor bosses (they self-tap). Driving them from inside
-   the box is not possible once the pack is in, and the heads would sit under the pack.
-5. **Wire the box.** Solder the three resistors and the LED branches onto the junction board, then pack, switch
-   and board. Press
-   the switch into its pocket against the top wall, lever through the slot. Hot-glue the pack on the floor bosses,
-   with the micro-USB in front of its notch. Tuck the junction board where it fits (reserve room for it with
-   `pack_top_room`). Close the lid with 2 × M3 self-tapping screws.
-6. **Prepare the clamp.** Put one layer of electrical tape on each jaw. Press a nut into the inner jaw and glue the
-   screw heads into the two knobs.
-7. **Mount it.** Place the inner jaw behind the fork (towards the earcup), ridge at the back, and fit the outer jaw
-   over the fork. Screw the knob in from outside. Snap the ball into the socket, put the nut in the pinch lug, then
-   fit the screw and the second knob.
+1. **Fit the clamp on the headset.** Put one layer of electrical tape on each jaw, press a nut into the inner jaw and
+   glue the screw heads into the two knobs. Place the inner jaw behind the fork (towards the earcup), ridge at the
+   back, fit the outer jaw over the fork and screw the knob in from outside.
+2. **Build the junction board.** On a small piece of perfboard, solder the base wires to the pack, the switch, the
+   three 270 Ω resistors, then one "long" pair of wires per LED. **Leave the F (middle) LED wires 6 cm or more**: F
+   sits right against the box and is very hard to reach once it is in its slot. The resistors cannot go on the LED
+   legs: the legs bend straight down into the wire channel right behind the flange, with no room for a resistor.
+3. **Solder the LEDs.** Solder each LED to its pair of wires and protect the legs with heat-shrink. Drop each LED
+   into its slot from outside, emitting face towards the front (the T / B side, towards the camera), flange towards
+   the back, legs bent down into the wire channel. Press the cap on top.
+4. **Route the wires.** F runs straight back into the box through the open trench (the lid closes it). T and B run
+   down their branch and into the box through the slots at the foot of the inner wall.
+5. **Wire the box and mount the ball.** Press the switch into its pocket against the top wall, lever through the
+   slot. Hot-glue the pack on the floor bosses, with the micro-USB in front of its notch, and tuck the junction board
+   where it fits (reserve room for it with `pack_top_room`). Fix the ball flange to the outside of the box floor with
+   3 × M3 × 6 driven **from the ball side** (they self-tap into the floor bosses). There is no room inside the box
+   for the screw heads. Close the lid with 2 × M3 self-tapping screws.
+6. **Close the channels.** Fit the two channel covers in their recesses and fix them with hot glue.
+7. **Mount it.** Snap the ball into the socket, put the nut in the pinch lug, then fit the screw and the second knob.
 8. **Aim it.** In TrackIR (TrackClip Pro profile) or opentrack, loosen the pinch knob, aim the clip so all three
    points are visible and upright, then tighten the knob.
+
+## Results
+
+With opentrack (PointTracker) and a webcam modded for IR (IR-cut filter removed, IR-pass filter added), each LED
+shows as a spot about 12 px wide, even at 2 m from the camera.
 
 ## Build notes
 
 - The battery block came out thicker than planned. The ball flange screws now go in from the ball side into 1 mm
   bosses on the box floor, so they no longer take room under the pack.
-- A small perfboard for the LED branches and resistors made the wiring much tidier than splicing in the lane.
+- A small perfboard for the base wires, switch, resistors and LED branches made the wiring much tidier than
+  splicing in the lane.
 - The resistors cannot sit on the LED legs: the legs bend down to follow the printed slot immediately behind the
   flange. They go on the junction board instead.
-- The middle LED (F) is the hardest to place: its wires are short and the box is right behind it. Leave its leads
-  long, and wire it first.
+- The middle LED (F) is the hardest to place: its wires are short and the box is right behind it. Leave its wires
+  long.
+- The channel covers were hot-glued rather than relying on their press fit.
 
 ## License
 
