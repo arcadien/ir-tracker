@@ -108,18 +108,21 @@ To export a single part as STL: `openscad -D 'part="print_arm"' -o arm.stl ir-tr
 Wiring: pack + → switch (middle pin + one side pin) → junction board → three branches in parallel, each
 270 Ω + LED → pack −.
 
-1. **Prepare the LEDs.** Solder a 270 Ω resistor to one leg of each LED and heat-shrink it. Solder the leads
-   **before** placing the LEDs, and **leave the F (middle) LED leads long (6 cm or more)**. F sits right against the
-   box, and its wires are very hard to reach once it is in its slot.
+1. **Prepare the LEDs.** Solder two thin wires (28 AWG) to the legs of each LED, insulate the joints with
+   heat-shrink, and keep them short and flat. **Do not put the resistors on the LEDs**: the legs bend straight down
+   into the wire channel right behind the flange, so there is no room for a resistor there. The resistors go on the
+   junction board in the box. Solder the wires **before** placing the LEDs, and **leave the F (middle) LED wires
+   long (6 cm or more)**. F sits right against the box, and its wires are very hard to reach once it is in its slot.
 2. **Place the LEDs.** Drop each LED into its slot from outside, emitting face towards the front (the T / B side,
-   towards the camera), flange towards the back, legs down into the wire channel. Press its cap on top.
+   towards the camera), flange towards the back. Bend the legs down into the wire channel. Press the cap on top.
 3. **Route the wires.** F runs straight back into the box through the open trench (the lid closes it). T and B run
    down their branch and into the box through the slots at the foot of the inner wall. Press the two channel covers
    into their recesses.
 4. **Mount the ball before the pack.** Place the ball flange against the outside of the box floor and drive the
    3 × M3 × 6 **from the ball side** through the flange into the floor bosses (they self-tap). Driving them from inside
    the box is not possible once the pack is in, and the heads would sit under the pack.
-5. **Wire the box.** Solder the branches and resistors onto the junction board, then pack, switch and board. Press
+5. **Wire the box.** Solder the three resistors and the LED branches onto the junction board, then pack, switch
+   and board. Press
    the switch into its pocket against the top wall, lever through the slot. Hot-glue the pack on the floor bosses,
    with the micro-USB in front of its notch. Tuck the junction board where it fits (reserve room for it with
    `pack_top_room`). Close the lid with 2 × M3 self-tapping screws.
@@ -136,6 +139,8 @@ Wiring: pack + → switch (middle pin + one side pin) → junction board → thr
 - The battery block came out thicker than planned. The ball flange screws now go in from the ball side into 1 mm
   bosses on the box floor, so they no longer take room under the pack.
 - A small perfboard for the LED branches and resistors made the wiring much tidier than splicing in the lane.
+- The resistors cannot sit on the LED legs: the legs bend down to follow the printed slot immediately behind the
+  flange. They go on the junction board instead.
 - The middle LED (F) is the hardest to place: its wires are short and the box is right behind it. Leave its leads
   long, and wire it first.
 

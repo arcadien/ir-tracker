@@ -17,7 +17,8 @@ second clamp screw on the other side of the fork is being considered.
 
 **Final build** (2026-10-22): works. The battery block was thicker than planned, so the ball flange screws were
 driven from the ball side into the box floor (now in the model: tapped floor with 1 mm bosses, clearance holes in the
-flange); a small perfboard junction carries the LED branches and resistors; the F LED leads were too short to wire
+flange); a small perfboard junction in the box carries the LED branches and the resistors (they cannot sit on the
+LED legs, which bend down the printed slot right behind the flange); the F LED leads were too short to wire
 comfortably (the guide now says to leave them long). The battery and box dimensions were gathered at the top of the
 SCAD file (`/* [Your parts] */`).
 
@@ -183,11 +184,12 @@ lug); M3×6 round head ×3 (from the ball side through the flange into the box f
 2 × 12 × 18 mm (one layer per jaw); 3 × 270 Ω 1 % 1/4 W (5 bands red-violet-black-black-brown; check with an ohmmeter, a 270 kΩ was mistaken for one).
 
 Assembly:
-1. Solder each LED to its 270 Ω resistor, heat-shrink; drop each LED in its slot from outside, emitting face
-   forward (towards T / B's side, the camera), flange towards the back, legs down the slot into the wire channel;
-   press the cap on top.
+1. Solder wires to each LED's legs, heat-shrink (resistors go on the junction board in the box: final build, the legs
+   bend down the slot right behind the flange, no room for a resistor there); drop each LED in its slot from outside,
+   emitting face forward (towards T / B's side, the camera), flange towards the back, legs bent down the slot into
+   the wire channel; press the cap on top.
 2. Run the wires in the channel (outer face) through the slots into the box; press the two covers in their recess.
-3. Wire: pack + → switch (middle + one side pin) → the 3 LED branches in parallel → pack −. Press the switch body
+3. Wire: pack + → switch (middle + one side pin) → junction board (3 resistors) → the 3 LED branches in parallel → pack −. Press the switch body
    down into its pocket against the top end wall (a drop of glue on top only if it lifts), lever in the slot; LED wires along the lane. Pack hot-glued,
    micro-USB in front of its notch.
 4. Ball flange against the inner face, 3 × M3×6 from the ball side into the floor bosses (before the pack). Lid with 2 × M3.

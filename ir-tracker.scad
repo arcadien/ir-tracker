@@ -47,7 +47,7 @@ led_flange_t = 1;             // measured
 pocket = led_body + 0.2;      // body pocket (FDM holes print small)
 cbore = led_flange + 0.25;    // flange counterbore (the flange stops on its front shoulder)
 cbore_t = led_flange_t + 0.1;
-leg_l = 4;                    // room behind the flange for the legs and the resistor solder joint
+leg_l = 4;                    // room behind the flange for the legs and their wire joints (resistors on the junction board)
 leg_w = 3.5;                  // leg slot width, continues down through the plate into the wire channel
 los = 20;                     // half angle of the cone kept clear in front of every LED (deg)
 
